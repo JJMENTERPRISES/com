@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-link:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+  <title>Contact us</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>If you'd like to get in touch, you can reach me via:</p>
+    <ul>
+      <li><a class="contact-link" href="mailto:your.email@example.com">Email</a></li>
+      <li><a class="contact-link" href="https://wa.me/1234567890" id="whatsappLink">WhatsApp</a></li>
+    </ul>
+  </div>
+  <script>
+      document.getElementById("whatsappLink").addEventListener("click", function(event) {
+  const confirmLeave = confirm("Leaving this page to open WhatsApp. Are you sure?");
+  
+  if (!confirmLeave) {
+    event.preventDefault();
+  }
+});
+
+  </script>
+</body>
+</html>
